@@ -1,0 +1,746 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    font-style: italic;
+    background-color: #b2b2b2;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 150px auto;
+    text-align: center;
+    h1{
+        color: black;
+    }
+}
+.warning {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.btn { 
+    display: inline-block;
+    width: auto;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: 2px solid #3498db;
+    color: #3498db;
+    &:hover {
+        color: #fff;
+        background-color: #2980b9;
+    }
+}
+
+.login-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #3498db;
+    border: 2px solid #3498db;
+    transition: color 0.3s, background-color 0.3s;
+
+    &:hover {
+        color: #fff;
+        background-color: #3498db;
+    }
+
+
+}
+.submit-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    width: 100%;
+
+    &:hover {
+        background-color: #45a049;
+    }
+}
+//home
+$background-image-url: url('./img/PICS/pexels-photo-plane.webp');
+
+.background-image {
+    background-image: $background-image-url;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.home {
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:#2980b9;
+}
+
+.flights-heading {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+//search
+.search {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 20px;
+    background-color: #808080;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        select,
+        .datepicker__input {
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #dcdcdc;
+            color: #474747;
+        }
+    }
+}
+
+.search-flights-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: auto;
+    margin-top: 20px;
+
+    .search-flights-card {
+        background-color: #808080;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px;
+        width: calc(50% - 20px);
+        box-sizing: border-box;
+
+        .flight-header {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+    }
+}
+
+//flights
+.flights-container {
+    background-color: #474747;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .flights-heading {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .flight-card {
+        background-color: #808080;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 10px;
+        width: calc(50% - 20px);
+        box-sizing: border-box;
+
+        .flight-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            .flight-id {
+                font-weight: bold;
+            }
+
+            .flight-airline {
+                text-align: right;
+                flex-grow: 1;
+                /* Expand to fill remaining space */
+            }
+        }
+
+        .flight-details {
+            .origin-destination {
+                margin-bottom: 10px;
+            }
+
+            .time {
+                display: flex;
+                justify-content: space-between;
+
+                .departure,
+                .landing {
+                    flex-grow: 1;
+                    /* Expand to fill remaining space */
+                }
+            }
+        }
+
+        .book-btn {
+            background-color: #4caf50;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            margin-top: 10px;
+            display: block;
+            width: 100%;
+
+            &:hover {
+                background-color: #45a049;
+            }
+        }
+    }
+}
+
+//customerList
+.customer-list-container {
+    padding: 20px;
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3f3f3f;
+        }
+
+        tbody {
+            tr {           
+                background-color: #3f3f3f;                
+            }
+        }
+    }
+}
+
+//editCustomers
+.customer-details-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .customer-details {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #3f3f3f;
+        margin-bottom: 20px;
+
+        p {
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+    }
+
+    .loading {
+        font-style: italic;
+        color: #888;
+    }
+}
+
+//ticket
+.ticket {
+    border-radius: 10px;
+    background-color: #3f3f3f;
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .name {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .details {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+}
+//nav
+.nav {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem;
+
+    .title {
+        font-size: 2rem;
+        text-decoration: none;
+        color: white;
+    }
+}
+
+//flighsAdmin.jsx
+.clicked {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px; // Adjust the margin as needed
+
+    .flight-table-admin {
+        width: 80%;
+        border-collapse: collapse;
+        margin-top: 20px; // Adjust the margin as needed
+        background-color: rgba(0, 0, 0, 0.8); // Black with 80% transparency
+        border: 2px solid #fff; // White border
+        border-radius: 5px; // Optional: Add border-radius for rounded corners
+    }
+
+    .flight-item-admin {
+        color: #fff;
+
+        td {
+            padding: 10px;
+            border: 1px solid #fff; // White border
+        }
+    }
+}
+
+
+//login.jsx
+// .login {
+//     text-align: center;
+//     margin: 100px auto; // Center the form horizontally
+//     background-color: rgba(0, 0, 0, 0.5); // Black with 0.5 opacity
+//     width: 400px; // Adjust width as needed
+//     padding: 20px; // Add padding for better spacing
+//     border-radius: 10px; // Add border-radius for rounded corners
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center; // Center items horizontally
+//     gap: 10px; // Add gap between elements
+
+//     label {
+//         color: #fff; // White text color
+//     }
+
+//     input {
+//         padding: 8px;
+//         width: 50%; // Make inputs fill the container width
+//     }
+
+//     .btn {
+//         padding: 8px 20px;
+//         background-color: #007bff;
+//         color: #fff;
+//         border: none;
+//         cursor: pointer;
+//         width: fit-content; // Make button width fit its content
+//     }
+// }
+.login {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.login h1 {
+    margin-bottom: 20px;
+}
+
+.login label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.login input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login button:hover {
+    background-color: #0056b3;
+}
+
+.errmsg {
+    color: red;
+}
+
+.offscreen {
+    position: absolute;
+    left: -9999px;
+}
+
+
+//FlightsAdmin.jsx
+.flights-admin-container {
+    margin-bottom: 20px;
+    background-color: #333; // Grey-black background
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        thead {
+            button {
+                margin-bottom: 10px;
+            }
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #2f2f2f;
+        }
+
+        .flight-item {
+            background-color: #2f2f2f; // Apply background color to all rows
+
+            td {
+                &:last-child {
+                    button {
+                        padding: 5px 10px;
+                        background-color: #007bff;
+                        color: #fff;
+                        border: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+//selectedFlight
+.flights-select-container {
+    background-color: #323232;
+    max-width: 700px;
+    margin-left: 10%;
+    .customer-details {
+        margin-bottom: 20px;
+        padding: 20px;
+        background-color: #323232;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+    }
+
+    input[type='text'] {
+        width: 150px;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: #45a049;
+        }
+    }
+
+    .loading {
+        text-align: center;
+        font-style: italic;
+    }
+}
+//addFlight
+.add-flight-container {
+    form.add-flight {
+        width: 100%;
+        max-width: 500px; // Adjust max-width as needed
+        margin: 0 auto; // Center the form horizontally
+        padding: 20px;
+        background-color: #2f2f2f;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            margin-bottom: 15px;
+
+            label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+
+            select,
+            input[type="text"] {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+        }
+
+        .submit-btn {
+            display: inline-block;
+            width: auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:hover {
+                background-color: #0056b3;
+            }
+        }
+    }
+}
+
+//addCustomer
+.customer-form {
+    // Styling for the form container
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-width: 400px;
+    margin: 0 auto;
+
+    form {
+        // Styling for the form elements
+        margin-bottom: 20px;
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: black;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #adadad;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-left: 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #0056b3;
+            }
+        }
+    }
+
+    .flight-info {
+        // Styling for the flight information
+        margin: 20px;
+        padding: 10px;
+        background-color: #007bff;
+        border: 1px solid #bce8f1;
+        border-radius: 5px;
+        p {
+            margin: 5px 0;
+        }
+    }
+}
+
+//profile
+// .custom-menu {
+//     padding: 20px;
+//     background-color: #f4f4f4; // Light gray backgroundx
+//     width: 200px; // Adjust width as needed
+//     position: fixed;
+//     top: 25%; // Center vertically
+//     left: 50%; // Center horizontally
+//     transform: translate(-50%, -50%); // Center the box
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+//     h1 {
+//         margin-bottom: 20px;
+//         font-size: 24px;
+//         color: #333; // Dark gray text color
+//     }
+
+//     button {
+//         margin-bottom: 10px;
+//         padding: 8px 16px;
+//         background-color: transparent;
+//         border: none;
+//         cursor: pointer;
+//         text-align: center;
+//         text-decoration: none;
+//         color: #333; // Dark gray text color
+//         font-weight: bold;
+//         transition: color 0.3s;
+
+//         &:hover {
+//             color: #007bff; // Blue on hover
+//         }
+
+//         a {
+//             color: inherit; // Inherit text color from parent button
+//             text-decoration: none;
+
+//             &:hover {
+//                 color: inherit; // Inherit text color from parent button on hover
+//             }
+//         }
+//     }
+
+//     .btn {
+//         background-color: #007bff; // Blue background for logout button
+//         color: #fff; // White text color for logout button
+
+//         &:hover {
+//             background-color: #0056b3; // Darker blue on hover for logout button
+//         }
+//     }
+// }
+.custom-menu {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+
+
+    .custom-menu h1 {
+        margin-bottom: 20px;
+    }
+
+    .custom-menu button {
+        margin-bottom: 10px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .custom-menu button:hover {
+        background-color: #0056b3;
+    }
+}
